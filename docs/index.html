@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Funny Cubes / Весёлые кубики — Store</title>
+  <meta name="description" content="Digital in-game coin packs for Funny Cubes (Весёлые кубики). Prices, terms, refunds, seller details." />
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --panel: #fffdf8;
+      --text: #1a1a1a;
+      --muted: #5a534c;
+      --accent: #2f9e44;
+      --border: #e0d6c6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    header {
+      background: linear-gradient(135deg, #ffe8c8, #fff6e8);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1rem;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 1rem 3rem; }
+    h1 { margin: 0.2rem 0; font-size: 1.6rem; }
+    h2 {
+      margin-top: 2rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--accent);
+      font-size: 1.2rem;
+    }
+    h3 { margin-top: 1.25rem; font-size: 1.05rem; }
+    .sub { color: var(--muted); margin: 0.25rem 0 0; }
+    .lang {
+      display: flex; gap: 0.5rem; justify-content: flex-end; margin-bottom: 0.75rem;
+    }
+    .lang button {
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .lang button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+    }
+    th { background: #f3ebe0; }
+    .price { font-weight: 700; white-space: nowrap; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+    a { color: #0b6bcb; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hidden { display: none; }
+    nav.toc a { margin-right: 0.75rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="lang">
+        <button type="button" id="btn-ru" class="active" onclick="setLang('ru')">RU</button>
+        <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <div data-lang="ru">
+        <h1>Весёлые кубики (Funny Cubes)</h1>
+        <p class="sub">Цифровые внутриигровые товары · Официальная витрина продавца</p>
+      </div>
+      <div data-lang="en" class="hidden">
+        <h1>Funny Cubes (Весёлые кубики)</h1>
+        <p class="sub">Digital in-game products · Official seller storefront</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="toc card">
+      <span data-lang="ru"><strong>Разделы:</strong></span>
+      <span data-lang="en" class="hidden"><strong>Sections:</strong></span>
+      <a href="#products">1</a>
+      <a href="#order">2</a>
+      <a href="#payment">3</a>
+      <a href="#delivery">4</a>
+      <a href="#refund">5</a>
+      <a href="#contacts">6</a>
+      <a href="#legal">7</a>
+      <a href="#privacy">8</a>
+    </nav>
+
+    <section id="products">
+      <h2 data-lang="ru">1. Описание товаров и услуг</h2>
+      <h2 data-lang="en" class="hidden">1. Products and services</h2>
+
+      <div class="card">
+        <div data-lang="ru">
+          <p><strong>Игра:</strong> «Весёлые кубики» (Funny Cubes) — казуальная браузерная и мобильная головоломка в жанре match-2 (два и более одинаковых кубика в ряд или столбец).</p>
+          <p><strong>Что продаётся:</strong> цифровые пакеты <strong>внутриигровой валюты (монет)</strong>. Монеты используются в игре для покупки жизней, бустеров и иных внутриигровых возможностей, предусмотренных магазином игры.</p>
+          <p><strong>Характеристики / потребительские свойства:</strong></p>
+          <ul>
+            <li>формат — <strong>цифровой контент</strong> (начисление на игровой аккаунт);</li>
+            <li>физический товар отсутствует, упаковка и доставка почтой не применяются;</li>
+            <li>контент доступен только внутри игры «Весёлые кубики»;</li>
+            <li>возрастная категория контента — <strong>0+</strong> (без материалов 18+);</li>
+            <li>монеты не являются ценной бумагой, электронной валютой вне игры и не подлежат обмену на деньги.</li>
+          </ul>
+        </div>
+        <div data-lang="en" class="hidden">
+          <p><strong>Game:</strong> Funny Cubes («Весёлые кубики») — a casual browser and mobile match-2 puzzle game.</p>
+          <p><strong>What is sold:</strong> digital packs of <strong>in-game currency (coins)</strong>. Coins are used inside the game for lives, boosters and other features available in the in-game shop.</p>
+          <p><strong>Characteristics:</strong></p>
+          <ul>
+            <li>format — <strong>digital content</strong> credited to the player account;</li>
+            <li>no physical goods; no postal shipping;</li>
+            <li>usable only inside Funny Cubes;</li>
+            <li>age rating of content — <strong>0+</strong> (no 18+ material);</li>
+            <li>coins are not securities or real-world money and cannot be cashed out.</li>
+          </ul>
+        </div>
+
+        <h3 data-lang="ru">Актуальные цены (базовая стоимость, RUB)</h3>
+        <h3 data-lang="en" class="hidden">Current prices (base price, RUB)</h3>
+        <p data-lang="ru" class="sub">Цены указаны в российских рублях. На отдельных площадках (VK, Yandex Games, Telegram и др.) итоговая сумма может отображаться в валюте или единицах площадки согласно их правилам; ниже — базовая стоимость пакетов продавца.</p>
+        <p data-lang="en" class="hidden sub">Prices are listed in Russian rubles. On some platforms the checkout amount may be shown in platform currency or units per platform rules; below are the seller’s base pack prices.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th data-lang="ru">Товар</th>
+              <th data-lang="en" class="hidden">Product</th>
+              <th data-lang="ru">Описание</th>
+              <th data-lang="en" class="hidden">Description</th>
+              <th data-lang="ru">Цена</th>
+              <th data-lang="en" class="hidden">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>300 Coin / 300 Монет</td>
+              <td data-lang="ru">Добавляет игроку 300 монет</td>
+              <td data-lang="en" class="hidden">Adds 300 coins to the player</td>
+              <td class="price">120 ₽</td>
+            </tr>
+            <tr>
+              <td>800 Coin / 800 Монет</td>
+              <td data-lang="ru">Добавляет игроку 800 монет</td>
+              <td data-lang="en" class="hidden">Adds 800 coins to the player</td>
+              <td class="price">300 ₽</td>
+            </tr>
+            <tr>
+              <td>1900 Coin / 1900 Монет</td>
+              <td data-lang="ru">Добавляет игроку 1900 монет</td>
+              <td data-lang="en" class="hidden">Adds 1900 coins to the player</td>
+              <td class="price">640 ₽</td>
+            </tr>
+            <tr>
+              <td>2400 Coin / 2400 Монет</td>
+              <td data-lang="ru">Добавляет игроку 2400 монет</td>
+              <td data-lang="en" class="hidden">Adds 2400 coins to the player</td>
+              <td class="price">770 ₽</td>
+            </tr>
+            <tr>
+              <td>7200 Coin / 7200 Монет</td>
+              <td data-lang="ru">Добавляет игроку 7200 монет</td>
+              <td data-lang="en" class="hidden">Adds 7200 coins to the player</td>
+              <td class="price">1&nbsp;730 ₽</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sub" data-lang="ru">Идентификаторы пакетов (tag): COIN300, COIN800, COIN1900, COIN2400, COIN7200.</p>
+        <p class="sub" data-lang="en" class="hidden">Pack tags: COIN300, COIN800, COIN1900, COIN2400, COIN7200.</p>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2 data-lang="ru">2. Заказ: правила оформления и сроки</h2>
+      <h2 data-lang="en" class="hidden">2. Order: rules and timelines</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <ol>
+            <li>Покупатель выбирает пакет монет в магазине игры «Весёлые кубики» или инициирует оплату через подключённый платёжный сценарий.</li>
+            <li>Оплата выполняется через платёжный сервис <strong>Robokassa</strong> (и/или платёжные средства площадки, если покупка идёт на стороне магазина платформы).</li>
+            <li>После <strong>успешного</strong> подтверждения платежа цифровые монеты зачисляются на игровой аккаунт покупателя.</li>
+            <li><strong>Срок исполнения:</strong> как правило — сразу после оплаты; в любом случае не позднее <strong>24 часов</strong> с момента успешной оплаты.</li>
+            <li>Если начисление не произошло в течение 24 часов, покупатель обращается в поддержку (см. Контакты), указав дату, сумму и идентификатор платежа.</li>
+          </ol>
+          <p>Заказ считается исполненным в момент зачисления монет на игровой аккаунт.</p>
+        </div>
+        <div data-lang="en" class="hidden">
+          <ol>
+            <li>The buyer selects a coin pack in the Funny Cubes in-game shop or starts checkout via the connected payment flow.</li>
+            <li>Payment is processed via <strong>Robokassa</strong> (and/or the platform’s payment methods if the purchase is completed on a storefront platform).</li>
+            <li>After <strong>successful</strong> payment confirmation, coins are credited to the buyer’s game account.</li>
+            <li><strong>Fulfillment time:</strong> usually immediately after payment; in any case no later than <strong>24 hours</strong> after successful payment.</li>
+            <li>If coins are not credited within 24 hours, contact support (see Contacts) with the date, amount and payment ID.</li>
+          </ol>
+          <p>The order is fulfilled when coins are credited to the game account.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="payment">
+      <h2 data-lang="ru">3. Оплата</h2>
+      <h2 data-lang="en" class="hidden">3. Payment</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <ul>
+            <li>Оплата производится через сервис <strong>Robokassa</strong> доступными способами (банковские карты и иные методы, подключённые продавцу).</li>
+            <li>Валюта расчёта с продавцом по базовому прайсу — российский рубль (₽).</li>
+            <li>Совершая оплату, покупатель подтверждает, что ознакомился с описанием товара, ценой, условиями оказания услуги, возврата и политикой обработки персональных данных на этой странице.</li>
+            <li>Подтверждение оплаты / чек формируется в соответствии с правилами платёжного сервиса и статусом продавца (самозанятый).</li>
+          </ul>
+        </div>
+        <div data-lang="en" class="hidden">
+          <ul>
+            <li>Payment is made via <strong>Robokassa</strong> using available methods (bank cards and other methods enabled for the seller).</li>
+            <li>Base list prices are in Russian rubles (₽).</li>
+            <li>By paying, the buyer confirms they have read the product description, price, service terms, refund policy and personal data policy on this page.</li>
+            <li>Payment confirmation / receipt is issued according to the payment provider rules and the seller’s self-employed status.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <h2 data-lang="ru">4. Доставка / оказание услуги</h2>
+      <h2 data-lang="en" class="hidden">4. Delivery / service provision</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <p>Товар является <strong>цифровым</strong>. Физическая доставка не осуществляется и не тарифицируется.</p>
+          <p><strong>Порядок предоставления:</strong> после успешной оплаты пакет монет зачисляется на аккаунт игрока в «Весёлых кубиках», с которого оформлена покупка (либо на аккаунт, однозначно связанный с платежом).</p>
+          <p><strong>Срок:</strong> незамедлительно после подтверждения оплаты, максимум 24 часа.</p>
+        </div>
+        <div data-lang="en" class="hidden">
+          <p>The product is <strong>digital</strong>. No physical shipping is provided or charged.</p>
+          <p><strong>How it is provided:</strong> after successful payment, the coin pack is credited to the Funny Cubes player account used for the purchase (or the account clearly linked to the payment).</p>
+          <p><strong>Timing:</strong> immediately after payment confirmation, within 24 hours at most.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="refund">
+      <h2 data-lang="ru">5. Отказ от покупки и возврат средств</h2>
+      <h2 data-lang="en" class="hidden">5. Cancellation and refunds</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <h3>Отказ до оплаты</h3>
+          <p>Покупатель может не завершать платёж. Средства в этом случае не списываются.</p>
+          <h3>После оплаты</h3>
+          <p>Покупатель вправе обратиться за возвратом, если:</p>
+          <ul>
+            <li>оплата прошла, но монеты <strong>не зачислены</strong> в срок до 24 часов;</li>
+            <li>зачислен неверный пакет / техническая ошибка начисления;</li>
+            <li>услуга фактически не оказана по вине продавца.</li>
+          </ul>
+          <p><strong>Сумма возврата:</strong> покупателю возвращается <strong>полная</strong> сумма, уплаченная за соответствующий товар. Возврат <strong>не уменьшается</strong> на комиссию банка, платёжного сервиса или иные удержания — покупателю возвращаются уплаченные им денежные средства в полном объёме.</p>
+          <h3>Пошаговый алгоритм возврата</h3>
+          <ol>
+            <li>Направить обращение на email <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a>, тема: <em>«Возврат — Весёлые кубики»</em>.</li>
+            <li>В письме указать: дату и сумму платежа; способ оплаты; идентификатор платежа Robokassa (если есть); игровой аккаунт / ID; причину возврата.</li>
+            <li>Обращение рассматривается в срок <strong>до 3 рабочих дней</strong>.</li>
+            <li>При одобрении возврат инициируется <strong>тем же способом</strong>, которым была произведена оплата, в срок <strong>до 10 календарных дней</strong> с момента принятия решения о возврате (срок зачисления банком покупателя может зависеть от банка).</li>
+            <li>О результате покупатель уведомляется ответом на email обращения.</li>
+          </ol>
+          <p>Если цифровой контент уже полностью предоставлен и использован, возможность возврата рассматривается индивидуально с учётом применимого законодательства РФ о защите прав потребителей в отношении цифрового контента.</p>
+        </div>
+        <div data-lang="en" class="hidden">
+          <h3>Before payment</h3>
+          <p>The buyer may abandon checkout. No funds are charged.</p>
+          <h3>After payment</h3>
+          <p>The buyer may request a refund if:</p>
+          <ul>
+            <li>payment succeeded but coins were <strong>not credited</strong> within 24 hours;</li>
+            <li>the wrong pack was credited / a technical crediting error occurred;</li>
+            <li>the service was not actually provided due to the seller.</li>
+          </ul>
+          <p><strong>Refund amount:</strong> the buyer receives a <strong>full</strong> refund of the amount paid. The refund is <strong>not reduced</strong> by bank or payment-provider fees.</p>
+          <h3>Refund steps</h3>
+          <ol>
+            <li>Email <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a>, subject: <em>“Refund — Funny Cubes”</em>.</li>
+            <li>Include: payment date and amount; payment method; Robokassa payment ID (if any); game account / ID; reason.</li>
+            <li>Review within <strong>3 business days</strong>.</li>
+            <li>If approved, refund via the <strong>same payment method</strong> within <strong>10 calendar days</strong> after approval (bank posting time may vary).</li>
+            <li>The buyer is notified by reply email.</li>
+          </ol>
+          <p>If digital content has already been fully delivered and used, refund eligibility is assessed individually under applicable consumer-protection rules for digital content.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <h2 data-lang="ru">6. Контакты</h2>
+      <h2 data-lang="en" class="hidden">6. Contacts</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <p>По вопросам заказа, начисления монет и возврата:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></li>
+          </ul>
+        </div>
+        <div data-lang="en" class="hidden">
+          <p>For orders, coin delivery and refunds:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legal">
+      <h2 data-lang="ru">7. Реквизиты продавца</h2>
+      <h2 data-lang="en" class="hidden">7. Seller details</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <p><strong>Статус:</strong> самозанятый (плательщик НПД)</p>
+          <p><strong>ФИО:</strong> Бутко Андрей Александрович</p>
+          <p><strong>ИНН:</strong> 930707386056</p>
+          <p><strong>Продукт:</strong> цифровые внутриигровые товары для игры «Весёлые кубики» (Funny Cubes)</p>
+        </div>
+        <div data-lang="en" class="hidden">
+          <p><strong>Status:</strong> self-employed (Russian professional income tax / NPD)</p>
+          <p><strong>Full name:</strong> Butko Andrey Aleksandrovich</p>
+          <p><strong>INN (tax ID):</strong> 930707386056</p>
+          <p><strong>Product:</strong> digital in-game items for Funny Cubes («Весёлые кубики»)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2 data-lang="ru">8. Политика обработки персональных данных</h2>
+      <h2 data-lang="en" class="hidden">8. Personal data processing policy</h2>
+      <div class="card">
+        <div data-lang="ru">
+          <p><strong>Оператор:</strong> самозанятый Бутко Андрей Александрович, ИНН 930707386056.</p>
+          <p><strong>Контакт по вопросам ПДн:</strong> <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></p>
+          <p><strong>Какие данные могут обрабатываться:</strong> адрес электронной почты; идентификаторы платежа; сведения, необходимые для зачисления покупки (игровой аккаунт / ID); содержание обращения в поддержку; технические данные сообщения.</p>
+          <p><strong>Цели:</strong> исполнение договора оказания цифровой услуги (продажа монет); поддержка пользователей; рассмотрение возвратов; исполнение требований законодательства РФ.</p>
+          <p><strong>Срок:</strong> в течение срока исполнения обязательств и сроков, установленных законом.</p>
+          <p><strong>Права субъекта ПДн:</strong> запросить информацию об обработке, уточнение, блокирование или удаление данных в случаях, предусмотренных законом — запросом на email поддержки.</p>
+          <p>Продавец не продаёт персональные данные третьим лицам. Данные банковской карты обрабатываются платёжным сервисом (Robokassa / банк) и не хранятся продавцом в открытом виде.</p>
+          <p>Обработка осуществляется в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+        </div>
+        <div data-lang="en" class="hidden">
+          <p><strong>Controller:</strong> self-employed Butko Andrey Aleksandrovich, INN 930707386056.</p>
+          <p><strong>Privacy contact:</strong> <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></p>
+          <p><strong>Data that may be processed:</strong> email address; payment identifiers; data needed to credit a purchase (game account / ID); support message content; technical message metadata.</p>
+          <p><strong>Purposes:</strong> performing the digital service contract (coin sales); user support; refund handling; compliance with applicable law.</p>
+          <p><strong>Retention:</strong> for the period needed to perform obligations and as required by law.</p>
+          <p><strong>Rights:</strong> request access, correction, blocking or deletion where required by law — by emailing support.</p>
+          <p>The seller does not sell personal data. Card data is processed by the payment provider (Robokassa / bank) and is not stored by the seller in clear text.</p>
+          <p>Processing follows the principles of Russian Federal Law No. 152-FZ “On Personal Data” (27 July 2006).</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p data-lang="ru">© Весёлые кубики / Funny Cubes · Бутко Андрей Александрович · ИНН 930707386056</p>
+      <p data-lang="en" class="hidden">© Funny Cubes / Весёлые кубики · Butko Andrey Aleksandrovich · INN 930707386056</p>
+      <p data-lang="ru">Контакт: <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></p>
+      <p data-lang="en" class="hidden">Contact: <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></p>
+    </footer>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        if (el.getAttribute('data-lang') === lang) el.classList.remove('hidden');
+        else el.classList.add('hidden');
+      });
+      document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang === 'ru' ? 'ru' : 'en';
+      try { localStorage.setItem('fc_store_lang', lang); } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('fc_store_lang'); } catch (e) {}
+      if (saved === 'en' || saved === 'ru') setLang(saved);
+      else if ((navigator.language || '').toLowerCase().indexOf('ru') !== 0) setLang('en');
+    })();
+  </script>
+</body>
+</html>
