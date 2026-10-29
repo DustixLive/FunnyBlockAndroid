@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Funny Cubes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">FC</div>
+        <div>
+          <h1 data-i18n="brand">Весёлые кубики</h1>
+          <p data-i18n="brandSub">Политика конфиденциальности</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button type="button" id="btn-ru" class="active">RU</button>
+        <button type="button" id="btn-en">EN</button>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" data-i18n="navStore">Магазин</a>
+      <a href="terms.html" data-i18n="navTerms">Условия и возврат</a>
+      <a href="privacy.html" class="active" data-i18n="navPrivacy">Конфиденциальность</a>
+    </nav>
+
+    <section class="hero">
+      <h2 data-i18n="title">Политика обработки персональных данных</h2>
+      <p data-i18n="lead"></p>
+    </section>
+
+    <section class="section">
+      <h3><span></span><span data-i18n="s1">1. Оператор</span></h3>
+      <p data-i18n="s1t"></p>
+    </section>
+    <section class="section">
+      <h3><span></span><span data-i18n="s2">2. Какие данные</span></h3>
+      <p data-i18n="s2t"></p>
+    </section>
+    <section class="section">
+      <h3><span></span><span data-i18n="s3">3. Цели</span></h3>
+      <p data-i18n="s3t"></p>
+    </section>
+    <section class="section">
+      <h3><span></span><span data-i18n="s4">4. Срок и передача</span></h3>
+      <p data-i18n="s4t"></p>
+    </section>
+    <section class="section">
+      <h3><span></span><span data-i18n="s5">5. Права субъекта</span></h3>
+      <p data-i18n="s5t"></p>
+    </section>
+    <section class="section">
+      <h3><span></span><span data-i18n="s6">6. Контакт</span></h3>
+      <p>Email: <a href="mailto:despawnsoftware@yandex.ru">despawnsoftware@yandex.ru</a></p>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="navStore">Магазин</a>
+        <a href="terms.html" data-i18n="navTerms">Условия и возврат</a>
+      </div>
+      <p data-i18n="footer"></p>
+    </footer>
+  </div>
+  <script>
+    const I18N = {
+      ru: {
+        brand: "Весёлые кубики", brandSub: "Политика конфиденциальности",
+        navStore: "Магазин", navTerms: "Условия и возврат", navPrivacy: "Конфиденциальность",
+        title: "Политика обработки персональных данных",
+        lead: "В соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».",
+        s1: "1. Оператор", s1t: "Оператор: самозанятый Бутко Андрей Александрович, ИНН 930707386056, г. Константиновка, Донецкая Народная Республика, Российская Федерация.",
+        s2: "2. Какие данные обрабатываются", s2t: "Адрес электронной почты; идентификаторы платежа; данные, нужные для зачисления покупки (игровой аккаунт / ID); содержание обращений в поддержку; технические данные сообщения. Данные банковской карты обрабатывает платёжный сервис (Robokassa / банк); продавец не хранит их в открытом виде.",
+        s3: "3. Цели обработки", s3t: "Исполнение договора оказания цифровой услуги (продажа монет); поддержка пользователей; рассмотрение возвратов; исполнение требований законодательства РФ.",
+        s4: "4. Срок хранения и передача", s4t: "Данные хранятся в срок, необходимый для исполнения обязательств и требований закона. Продавец не продаёт персональные данные третьим лицам. Передача возможна платёжному провайдеру и по законному требованию уполномоченных органов.",
+        s5: "5. Права субъекта персональных данных", s5t: "Вы можете запросить сведения об обработке, уточнение, блокирование или удаление данных в случаях, предусмотренных законом — направив запрос на despawnsoftware@yandex.ru.",
+        s6: "6. Контакт по вопросам ПДн",
+        footer: "© Весёлые кубики · Бутко А. А. · ИНН 930707386056"
+      },
+      en: {
+        brand: "Funny Cubes", brandSub: "Privacy policy",
+        navStore: "Store", navTerms: "Terms & refunds", navPrivacy: "Privacy",
+        title: "Personal data processing policy",
+        lead: "Aligned with the principles of Russian Federal Law No. 152-FZ “On Personal Data” (27 July 2006).",
+        s1: "1. Controller", s1t: "Controller: self-employed Butko Andrey Aleksandrovich, INN 930707386056, Konstantinovka, Donetsk People’s Republic, Russian Federation.",
+        s2: "2. Data processed", s2t: "Email address; payment identifiers; data needed to credit a purchase (game account / ID); support message content; technical message metadata. Card data is processed by the payment provider (Robokassa / bank); the seller does not store it in clear text.",
+        s3: "3. Purposes", s3t: "Performing the digital service contract (coin sales); user support; refund handling; compliance with applicable law.",
+        s4: "4. Retention and sharing", s4t: "Data is kept as long as needed for obligations and legal requirements. The seller does not sell personal data. Sharing may occur with the payment provider and when required by competent authorities.",
+        s5: "5. Your rights", s5t: "You may request access, correction, blocking or deletion where required by law by emailing despawnsoftware@yandex.ru.",
+        s6: "6. Privacy contact",
+        footer: "© Funny Cubes · Butko A. A. · INN 930707386056"
+      }
+    };
+    let lang = localStorage.getItem("fc_lang") || ((navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en");
+    function apply() {
+      const d = I18N[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el => { if (d[el.dataset.i18n] != null) el.textContent = d[el.dataset.i18n]; });
+      document.documentElement.lang = lang;
+      document.getElementById("btn-ru").classList.toggle("active", lang === "ru");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+    document.getElementById("btn-ru").onclick = () => { lang = "ru"; localStorage.setItem("fc_lang", lang); apply(); };
+    document.getElementById("btn-en").onclick = () => { lang = "en"; localStorage.setItem("fc_lang", lang); apply(); };
+    apply();
+  </script>
+</body>
+</html>
