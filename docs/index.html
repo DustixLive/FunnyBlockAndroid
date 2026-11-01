@@ -33,17 +33,25 @@
 
     <section class="hero">
       <h2 data-i18n="heroTitle">Внутриигровые монеты для Funny Cubes</h2>
-      <p data-i18n="heroText">Цифровые пакеты монет для казуальной match-2 головоломки. Покупка через Robokassa, зачисление на игровой аккаунт.</p>
+      <p data-i18n="heroText">Цифровые пакеты монет для казуальной match-2 головоломки. Покупка в магазине игры; на Android — через Robokassa.</p>
       <div class="badges">
         <span class="badge" data-i18n="b1">Цифровой контент</span>
         <span class="badge" data-i18n="b2">0+</span>
-        <span class="badge" data-i18n="b3">Зачисление до 24 ч</span>
+        <span class="badge" data-i18n="b3">Мгновенное зачисление</span>
         <span class="badge" data-i18n="b4">Полный возврат при сбое</span>
       </div>
     </section>
 
+    <section class="section" id="play">
+      <h3><span></span><span data-i18n="playTitle">Где играть</span></h3>
+      <p data-i18n="playLead"></p>
+      <div class="platforms" id="platforms"></div>
+    </section>
+
     <h3 style="margin:0 0 0.6rem;font-size:1.05rem" data-i18n="packsTitle">Пакеты монет</h3>
     <div class="grid" id="products"></div>
+
+    <div class="howto" data-i18n="howto"></div>
 
     <section class="section" id="about">
       <h3><span></span><span data-i18n="aboutTitle">О товаре</span></h3>
@@ -100,6 +108,16 @@
         prices: { RUB: 1730, USD: 21.99, EUR: 19.99, GBP: 15.99, TRY: 1069.99, CNY: 139.99, JPY: 3399, KRW: 27990, INR: 1999, BRL: 109.99, AED: 78.99, IDR: 387990 } }
     ];
 
+    const PLATFORMS = [
+      { id: "yandex", name: { ru: "Яндекс Игры", en: "Yandex Games" }, url: "" },
+      { id: "vk", name: { ru: "ВК Игры", en: "VK Games" }, url: "https://vk.ru/app54829315" },
+      { id: "ok", name: { ru: "OK Игры", en: "OK Games" }, url: "https://ok.ru/game/512005099308" },
+      { id: "vkplay", name: { ru: "VK Play", en: "VK Play" }, url: "https://vkplay.ru/play/game/funny-cubes-39378/" },
+      { id: "playdeck", name: { ru: "PlayDeck", en: "PlayDeck" }, url: "" },
+      { id: "rustore", name: { ru: "RuStore", en: "RuStore" }, url: "" },
+      { id: "gplay", name: { ru: "Google Play", en: "Google Play" }, url: "" }
+    ];
+
     const CURRENCIES = [
       { code: "RUB", symbol: "₽", locale: "ru-RU" },
       { code: "USD", symbol: "$", locale: "en-US" },
@@ -123,19 +141,23 @@
         navTerms: "Условия и возврат",
         navPrivacy: "Конфиденциальность",
         heroTitle: "Внутриигровые монеты для Funny Cubes",
-        heroText: "Цифровые пакеты монет для казуальной match-2 головоломки. Оплата через Robokassa, зачисление на игровой аккаунт.",
-        b1: "Цифровой контент", b2: "0+", b3: "Зачисление до 24 ч", b4: "Полный возврат при сбое",
+        heroText: "Цифровые пакеты монет для казуальной match-2 головоломки. Покупка в магазине игры; на Android — через Robokassa.",
+        b1: "Цифровой контент", b2: "0+", b3: "Мгновенное зачисление", b4: "Полный возврат при сбое",
+        playTitle: "Где играть",
+        playLead: "Откройте игру на удобной площадке, затем зайдите в раздел магазина, чтобы купить монеты.",
+        soon: "Скоро",
         packsTitle: "Пакеты монет",
+        howto: "Для совершения покупки зайдите в игру → раздел «Магазин», выберите товар и оплатите. На Android-устройствах покупки проходят через платёжный агрегатор Robokassa. После успешной оплаты товар зачисляется моментально.",
         aboutTitle: "О товаре",
         about1: "Игра «Весёлые кубики» (Funny Cubes) — казуальная браузерная и мобильная головоломка: объединяйте два и более одинаковых кубика в ряд или столбец.",
         about2: "Монеты — цифровая внутриигровая валюта для жизней, бустеров и других возможностей магазина. Физической поставки нет. Монеты нельзя обменять на реальные деньги.",
         orderTitle: "Заказ и сроки",
-        order1: "Выберите пакет в магазине игры или на этой витрине и перейдите к оплате.",
-        order2: "Оплата через Robokassa (карты и другие подключённые способы).",
-        order3: "После успешной оплаты монеты зачисляются на игровой аккаунт — обычно сразу, максимум в течение 24 часов.",
-        order4: "Если начисления нет за 24 часа — напишите на despawnsoftware@yandex.ru с датой, суммой и ID платежа.",
+        order1: "Откройте игру на одной из площадок выше и зайдите в раздел «Магазин».",
+        order2: "Выберите пакет монет и подтвердите оплату. На Android оплата выполняется через Robokassa.",
+        order3: "После успешной оплаты монеты зачисляются на игровой аккаунт моментально (в редких случаях — в течение нескольких минут, не позднее 24 часов).",
+        order4: "Если начисления нет — напишите на despawnsoftware@yandex.ru с датой, суммой и ID платежа.",
         payTitle: "Оплата",
-        payText: "Оплата в валюте/способе, доступном в виджете Robokassa. Базовые цены продавца указаны в таблице пакетов (переключатель валют показывает справочные суммы из прайса). Совершая оплату, вы подтверждаете ознакомление с условиями и политикой конфиденциальности.",
+        payText: "Покупка оформляется только внутри игры в разделе магазина. На Android используется Robokassa (карты и другие подключённые способы). Цены на этой странице — справочные. Оплачивая, вы подтверждаете условия и политику конфиденциальности.",
         contactsTitle: "Контакты",
         contactsText: "Поддержка по заказам, начислению и возвратам:",
         legalTitle: "Реквизиты продавца",
@@ -149,19 +171,23 @@
         navTerms: "Terms & refunds",
         navPrivacy: "Privacy",
         heroTitle: "In-game coins for Funny Cubes",
-        heroText: "Digital coin packs for a casual match-2 puzzle. Paid via Robokassa, credited to your game account.",
-        b1: "Digital content", b2: "0+", b3: "Credit within 24h", b4: "Full refund if failed",
+        heroText: "Digital coin packs for a casual match-2 puzzle. Buy in the in-game shop; on Android via Robokassa.",
+        b1: "Digital content", b2: "0+", b3: "Instant credit", b4: "Full refund if failed",
+        playTitle: "Where to play",
+        playLead: "Open the game on a platform below, then go to the in-game Shop to buy coins.",
+        soon: "Soon",
         packsTitle: "Coin packs",
+        howto: "To make a purchase, open the game → Shop section, choose an item and pay. On Android devices purchases go through the Robokassa payment aggregator. After successful payment the item is credited instantly.",
         aboutTitle: "About the product",
         about1: "Funny Cubes is a casual browser and mobile match-2 puzzle: clear two or more matching cubes in a row or column.",
         about2: "Coins are digital in-game currency for lives, boosters and shop features. No physical shipping. Coins cannot be cashed out.",
         orderTitle: "Order & timelines",
-        order1: "Choose a pack in the game shop or here and proceed to payment.",
-        order2: "Pay via Robokassa (cards and other enabled methods).",
-        order3: "After successful payment, coins are credited — usually immediately, within 24 hours at most.",
-        order4: "If not credited in 24 hours, email despawnsoftware@yandex.ru with date, amount and payment ID.",
+        order1: "Open the game on one of the platforms above and go to the Shop section.",
+        order2: "Choose a coin pack and confirm payment. On Android, payment is processed via Robokassa.",
+        order3: "After successful payment, coins are credited instantly (rarely within a few minutes, no later than 24 hours).",
+        order4: "If not credited, email despawnsoftware@yandex.ru with date, amount and payment ID.",
         payTitle: "Payment",
-        payText: "Payment uses methods available in the Robokassa widget. Pack prices below follow the seller price list (currency switcher shows reference amounts). By paying you confirm the terms and privacy policy.",
+        payText: "Purchases are completed only inside the game Shop. On Android, Robokassa is used (cards and other enabled methods). Prices on this page are for reference. By paying you accept the terms and privacy policy.",
         contactsTitle: "Contacts",
         contactsText: "Support for orders, delivery and refunds:",
         legalTitle: "Seller details",
@@ -196,6 +222,18 @@
       }).join("");
     }
 
+    function renderPlatforms() {
+      const root = document.getElementById("platforms");
+      const soon = I18N[lang].soon;
+      root.innerHTML = PLATFORMS.map(p => {
+        const name = p.name[lang] || p.name.en;
+        if (p.url) {
+          return `<a class="platform-btn" href="${p.url}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+        }
+        return `<span class="platform-btn is-disabled">${name}<span class="soon">${soon}</span></span>`;
+      }).join("");
+    }
+
     function applyI18n() {
       const dict = I18N[lang];
       document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -206,6 +244,7 @@
       document.getElementById("btn-ru").classList.toggle("active", lang === "ru");
       document.getElementById("btn-en").classList.toggle("active", lang === "en");
       renderProducts();
+      renderPlatforms();
     }
 
     const sel = document.getElementById("currency");
