@@ -77,7 +77,6 @@ a:hover { text-decoration: underline; }
   align-items: center;
 }
 
-/* Currency select — readable on dark UI */
 .controls select {
   appearance: none;
   -webkit-appearance: none;
@@ -157,7 +156,7 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.9rem;
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 0.75rem;
 }
 .product {
   border: 1px solid var(--card-border);
@@ -194,6 +193,62 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
+.howto {
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  background: rgba(251, 191, 36, 0.08);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  margin: 0 0 1.5rem;
+  color: #f5e6c0;
+  font-size: 0.95rem;
+}
+.howto strong { color: var(--accent2); }
+
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+.platform-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 48px;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+.platform-btn:hover {
+  text-decoration: none;
+  border-color: rgba(94, 234, 212, 0.5);
+  background: rgba(94, 234, 212, 0.1);
+  transform: translateY(-2px);
+}
+.platform-btn.is-disabled,
+.platform-btn.is-disabled:hover {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  border-color: var(--card-border);
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+.platform-btn .soon {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
 .section {
   border: 1px solid var(--card-border);
   background: rgba(255, 255, 255, 0.04);
@@ -202,7 +257,6 @@ a:hover { text-decoration: underline; }
   margin-bottom: 1rem;
 }
 
-/* Section titles: one green dot + title on one line, no overlap */
 .section h3 {
   display: flex;
   align-items: center;
@@ -221,14 +275,8 @@ a:hover { text-decoration: underline; }
   background: var(--accent);
   box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.2);
 }
-/* Hide empty decorative spans left in HTML */
-.section h3 > span:empty {
-  display: none;
-}
-.section h3 > span {
-  display: inline;
-  min-width: 0;
-}
+.section h3 > span:empty { display: none; }
+.section h3 > span { display: inline; min-width: 0; }
 
 .section p,
 .section li { color: #d7dceb; }
