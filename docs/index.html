@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Funny Cubes — Store / Весёлые кубики</title>
   <meta name="description" content="Official storefront for Funny Cubes in-game coin packs. Prices, terms, refunds." />
+  <link rel="icon" href="Icon/gameicon.jpg" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="shell">
     <div class="topbar">
       <div class="brand">
-        <div class="logo">FC</div>
+        <div class="logo"><img src="Icon/gameicon.jpg" alt="Funny Cubes" width="52" height="52" /></div>
         <div>
           <h1 data-i18n="brand">Весёлые кубики</h1>
           <p data-i18n="brandSub">Официальная витрина цифровых товаров</p>
@@ -104,15 +105,15 @@
 
   <script>
     const PRODUCTS = [
-      { tag: "COIN300", coins: 300, names: { ru: "300 Монет", en: "300 Coins" }, desc: { ru: "Добавляет игроку 300 монет", en: "Adds 300 coins to the player" },
+      { tag: "COIN300", img: "Icon/M300.png", names: { ru: "300 Монет", en: "300 Coins" }, desc: { ru: "Добавляет игроку 300 монет", en: "Adds 300 coins to the player" },
         prices: { RUB: 120, USD: 1.49, EUR: 1.39, GBP: 1.09, TRY: 73.99, CNY: 9.89, JPY: 229, KRW: 1999, INR: 139, BRL: 7.49, AED: 5.49, IDR: 26990 } },
-      { tag: "COIN800", coins: 800, names: { ru: "800 Монет", en: "800 Coins" }, desc: { ru: "Добавляет игроку 800 монет", en: "Adds 800 coins to the player" },
+      { tag: "COIN800", img: "Icon/M800.png", names: { ru: "800 Монет", en: "800 Coins" }, desc: { ru: "Добавляет игроку 800 монет", en: "Adds 800 coins to the player" },
         prices: { RUB: 300, USD: 3.79, EUR: 3.39, GBP: 2.79, TRY: 179.99, CNY: 24.99, JPY: 589, KRW: 4899, INR: 349, BRL: 18.99, AED: 13.99, IDR: 66990 } },
-      { tag: "COIN1900", coins: 1900, names: { ru: "1900 Монет", en: "1900 Coins" }, desc: { ru: "Добавляет игроку 1900 монет", en: "Adds 1900 coins to the player" },
+      { tag: "COIN1900", img: "Icon/M1900.png", names: { ru: "1900 Монет", en: "1900 Coins" }, desc: { ru: "Добавляет игроку 1900 монет", en: "Adds 1900 coins to the player" },
         prices: { RUB: 640, USD: 7.99, EUR: 7.19, GBP: 5.89, TRY: 389.99, CNY: 52.99, JPY: 1199, KRW: 10990, INR: 759, BRL: 39.99, AED: 28.99, IDR: 143990 } },
-      { tag: "COIN2400", coins: 2400, names: { ru: "2400 Монет", en: "2400 Coins" }, desc: { ru: "Добавляет игроку 2400 монет", en: "Adds 2400 coins to the player" },
+      { tag: "COIN2400", img: "Icon/M2400.png", names: { ru: "2400 Монет", en: "2400 Coins" }, desc: { ru: "Добавляет игроку 2400 монет", en: "Adds 2400 coins to the player" },
         prices: { RUB: 770, USD: 9.59, EUR: 8.59, GBP: 7.09, TRY: 469.99, CNY: 63.99, JPY: 1499, KRW: 12990, INR: 909, BRL: 47.99, AED: 34.99, IDR: 172990 } },
-      { tag: "COIN7200", coins: 7200, names: { ru: "7200 Монет", en: "7200 Coins" }, desc: { ru: "Добавляет игроку 7200 монет", en: "Adds 7200 coins to the player" },
+      { tag: "COIN7200", img: "Icon/M7200.png", names: { ru: "7200 Монет", en: "7200 Coins" }, desc: { ru: "Добавляет игроку 7200 монет", en: "Adds 7200 coins to the player" },
         prices: { RUB: 1730, USD: 21.99, EUR: 19.99, GBP: 15.99, TRY: 1069.99, CNY: 139.99, JPY: 3399, KRW: 27990, INR: 1999, BRL: 109.99, AED: 78.99, IDR: 387990 } }
     ];
 
@@ -232,6 +233,7 @@
         const price = p.prices[currency] != null ? p.prices[currency] : p.prices.RUB;
         const cur = p.prices[currency] != null ? currency : "RUB";
         return `<article class="product">
+          <div class="thumb"><img src="${p.img}" alt="${p.names[lang]}" loading="lazy" width="140" height="140" /></div>
           <div class="coins">${p.names[lang]}</div>
           <div class="desc">${p.desc[lang]}</div>
           <div class="price">${formatPrice(cur, price)}</div>
