@@ -51,7 +51,15 @@
     <h3 style="margin:0 0 0.6rem;font-size:1.05rem" data-i18n="packsTitle">Пакеты монет</h3>
     <div class="grid" id="products"></div>
 
-    <div class="howto" data-i18n="howto"></div>
+    <section class="section howto-section" id="howto">
+      <h3><span></span><span data-i18n="howtoTitle">Как купить</span></h3>
+      <ol class="howto-steps">
+        <li><span class="num">1</span><span data-i18n="howto1"></span></li>
+        <li><span class="num">2</span><span data-i18n="howto2"></span></li>
+        <li><span class="num">3</span><span data-i18n="howto3"></span></li>
+        <li><span class="num">4</span><span data-i18n="howto4"></span></li>
+      </ol>
+    </section>
 
     <section class="section" id="about">
       <h3><span></span><span data-i18n="aboutTitle">О товаре</span></h3>
@@ -109,13 +117,13 @@
     ];
 
     const PLATFORMS = [
-      { id: "yandex", name: { ru: "Яндекс Игры", en: "Yandex Games" }, url: "" },
-      { id: "vk", name: { ru: "ВК Игры", en: "VK Games" }, url: "https://vk.ru/app54829315" },
-      { id: "ok", name: { ru: "OK Игры", en: "OK Games" }, url: "https://ok.ru/game/512005099308" },
-      { id: "vkplay", name: { ru: "VK Play", en: "VK Play" }, url: "https://vkplay.ru/play/game/funny-cubes-39378/" },
-      { id: "playdeck", name: { ru: "PlayDeck", en: "PlayDeck" }, url: "" },
-      { id: "rustore", name: { ru: "RuStore", en: "RuStore" }, url: "" },
-      { id: "gplay", name: { ru: "Google Play", en: "Google Play" }, url: "" }
+      { id: "yandex", icon: "Ya", name: { ru: "Яндекс Игры", en: "Yandex Games" }, url: "" },
+      { id: "vk", icon: "VK", name: { ru: "ВК Игры", en: "VK Games" }, url: "https://vk.ru/app54829315" },
+      { id: "ok", icon: "OK", name: { ru: "OK Игры", en: "OK Games" }, url: "https://ok.ru/game/512005099308" },
+      { id: "vkplay", icon: "VP", name: { ru: "VK Play", en: "VK Play" }, url: "https://vkplay.ru/play/game/funny-cubes-39378/" },
+      { id: "playdeck", icon: "PD", name: { ru: "PlayDeck", en: "PlayDeck" }, url: "" },
+      { id: "rustore", icon: "RS", name: { ru: "RuStore", en: "RuStore" }, url: "" },
+      { id: "gplay", icon: "GP", name: { ru: "Google Play", en: "Google Play" }, url: "" }
     ];
 
     const CURRENCIES = [
@@ -146,8 +154,13 @@
         playTitle: "Где играть",
         playLead: "Откройте игру на удобной площадке, затем зайдите в раздел магазина, чтобы купить монеты.",
         soon: "Скоро",
+        open: "Открыть",
         packsTitle: "Пакеты монет",
-        howto: "Для совершения покупки зайдите в игру → раздел «Магазин», выберите товар и оплатите. На Android-устройствах покупки проходят через платёжный агрегатор Robokassa. После успешной оплаты товар зачисляется моментально.",
+        howtoTitle: "Как купить",
+        howto1: "Откройте игру на одной из площадок выше.",
+        howto2: "Зайдите в раздел «Магазин» и выберите нужный пакет монет.",
+        howto3: "На Android-устройствах оплата проходит через платёжный агрегатор Robokassa.",
+        howto4: "После успешной оплаты товар зачисляется на аккаунт моментально.",
         aboutTitle: "О товаре",
         about1: "Игра «Весёлые кубики» (Funny Cubes) — казуальная браузерная и мобильная головоломка: объединяйте два и более одинаковых кубика в ряд или столбец.",
         about2: "Монеты — цифровая внутриигровая валюта для жизней, бустеров и других возможностей магазина. Физической поставки нет. Монеты нельзя обменять на реальные деньги.",
@@ -176,8 +189,13 @@
         playTitle: "Where to play",
         playLead: "Open the game on a platform below, then go to the in-game Shop to buy coins.",
         soon: "Soon",
+        open: "Open",
         packsTitle: "Coin packs",
-        howto: "To make a purchase, open the game → Shop section, choose an item and pay. On Android devices purchases go through the Robokassa payment aggregator. After successful payment the item is credited instantly.",
+        howtoTitle: "How to buy",
+        howto1: "Open the game on one of the platforms above.",
+        howto2: "Go to the Shop section and choose a coin pack.",
+        howto3: "On Android devices, payment goes through the Robokassa payment aggregator.",
+        howto4: "After successful payment the item is credited to your account instantly.",
         aboutTitle: "About the product",
         about1: "Funny Cubes is a casual browser and mobile match-2 puzzle: clear two or more matching cubes in a row or column.",
         about2: "Coins are digital in-game currency for lives, boosters and shop features. No physical shipping. Coins cannot be cashed out.",
@@ -225,12 +243,14 @@
     function renderPlatforms() {
       const root = document.getElementById("platforms");
       const soon = I18N[lang].soon;
+      const open = I18N[lang].open;
       root.innerHTML = PLATFORMS.map(p => {
         const name = p.name[lang] || p.name.en;
+        const body = `<span class="ico" aria-hidden="true">${p.icon}</span><span class="meta"><span class="name">${name}</span><span class="hint">${p.url ? open : soon}</span></span>`;
         if (p.url) {
-          return `<a class="platform-btn" href="${p.url}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+          return `<a class="platform-btn" data-id="${p.id}" href="${p.url}" target="_blank" rel="noopener noreferrer">${body}</a>`;
         }
-        return `<span class="platform-btn is-disabled">${name}<span class="soon">${soon}</span></span>`;
+        return `<span class="platform-btn is-disabled" data-id="${p.id}">${body}</span>`;
       }).join("");
     }
 
